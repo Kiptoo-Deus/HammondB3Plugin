@@ -2,3 +2,4 @@ build/
 *.o
 *.obj
 *.DS_Store
+Builds/MacOSX/HammondB3Plugin.xcodeproj/project.xcworkspace/xcuserdata/joel.xcuserdatad/UserInterfaceState.xcuserstate
