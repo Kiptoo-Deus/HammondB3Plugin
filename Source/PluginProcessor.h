@@ -1,5 +1,6 @@
 #pragma once
 #include <JuceHeader.h>
+#include "DSP/TonewheelSynth.h"
 
 class HammondB3PluginAudioProcessor : public juce::AudioProcessor
 {
@@ -28,6 +29,13 @@ public:
     void getStateInformation(juce::MemoryBlock&) override;
     void setStateInformation(const void*, int) override;
 
+    juce::AudioProcessorValueTreeState& getParameters() { return *parameters; }
+
 private:
+    std::unique_ptr<juce::AudioProcessorValueTreeState> parameters;
+    TonewheelSynth tonewheelSynth;
+
+    juce::AudioProcessorValueTreeState::ParameterLayout createParameterLayout();
+
     JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR(HammondB3PluginAudioProcessor)
 };

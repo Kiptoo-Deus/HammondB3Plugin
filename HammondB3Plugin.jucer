@@ -1,8 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <JUCERPROJECT id="t06QJQ" name="HammondB3Plugin" projectType="audioplug" useAppConfig="0"
-              addUsingNamespaceToJuceHeader="0" jucerFormatVersion="1">
+              addUsingNamespaceToJuceHeader="0" jucerFormatVersion="1" cppLanguageStandard="20">
   <MAINGROUP id="rk2YF0" name="HammondB3Plugin">
+    <GROUP id="{02518474-1900-3625-4E65-47EBED3165AF}" name="DSP">
+      <FILE id="mkIS5Q" name="TonewheelSynth.cpp" compile="1" resource="0"
+            file="Source/DSP/TonewheelSynth.cpp"/>
+      <FILE id="L2WENC" name="TonewheelSynth.h" compile="0" resource="0"
+            file="Source/DSP/TonewheelSynth.h"/>
+    </GROUP>
     <GROUP id="{F55168FD-9A73-E39D-AEFA-28D858470BB8}" name="Source">
       <FILE id="LALVcy" name="PluginProcessor.cpp" compile="1" resource="0"
             file="Source/PluginProcessor.cpp"/>
@@ -23,6 +29,7 @@
     <MODULE id="juce_audio_utils" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
     <MODULE id="juce_core" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
     <MODULE id="juce_data_structures" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_dsp" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
     <MODULE id="juce_events" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
     <MODULE id="juce_graphics" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
     <MODULE id="juce_gui_basics" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
@@ -48,6 +55,7 @@
         <MODULEPATH id="juce_graphics" path="../../../Downloads/JUCE/modules"/>
         <MODULEPATH id="juce_gui_basics" path="../../../Downloads/JUCE/modules"/>
         <MODULEPATH id="juce_gui_extra" path="../../../Downloads/JUCE/modules"/>
+        <MODULEPATH id="juce_dsp" path="../../../Downloads/JUCE/modules"/>
       </MODULEPATHS>
     </XCODE_MAC>
   </EXPORTFORMATS>
